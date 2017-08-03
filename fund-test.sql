@@ -15,11 +15,12 @@ sierra_view.record_metadata AS m
 ON
 o.id = m.id
 
+/*
 JOIN
 sierra_view.order_record_received AS orr
 ON
 o.id = orr.item_record_metadata_id
-
+*/
 
 WHERE
 m.record_num = 654887
