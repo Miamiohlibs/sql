@@ -23,4 +23,5 @@ AND
 i.location_code = 'kngco'
 AND 
 c.transaction_gmt::timestamp > CURRENT_TIMESTAMP(0) - INTERVAL '1 min'
-LIMIT 100;
+;
+
