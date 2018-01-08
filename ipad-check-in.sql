@@ -22,6 +22,6 @@ v.varfield_type_code = 'd'
 AND
 i.location_code = 'kngco'
 AND 
-c.transaction_gmt::timestamp > CURRENT_TIMESTAMP(0) - INTERVAL '1 min'
+c.transaction_gmt::timestamp > (CURRENT_TIMESTAMP(0) - INTERVAL '1 min')
 ;
 
