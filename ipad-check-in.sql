@@ -1,6 +1,6 @@
 ﻿SELECT
---*
-v.field_content
+*
+--v.field_content
 FROM
 sierra_view.circ_trans AS c
 JOIN
@@ -21,7 +21,9 @@ AND
 v.varfield_type_code = 'd'
 AND
 i.location_code = 'kngco'
+AND
+i.item_status_code = '-'
 AND 
-c.transaction_gmt::timestamp > (CURRENT_TIMESTAMP(0) - INTERVAL '1 min')
+c.transaction_gmt::timestamp > (CURRENT_TIMESTAMP(0) - INTERVAL '100 min')
 ;
 
