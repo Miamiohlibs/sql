@@ -19,7 +19,7 @@ SELECT
 FROM
 sierra_view.phrase_entry AS p
 WHERE
-p.index_entry IN
+p.index_entry IN --how can we do IN but also do fuzzy matching?
 ('9780870233227%',
 '9781781884652%'
 )
