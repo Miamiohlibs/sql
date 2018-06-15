@@ -1,5 +1,6 @@
 ﻿SELECT
-m.record_type_code || m.record_num || 'x' --count(*)
+m.record_type_code || m.record_num || 'x' 
+--count(*)
 FROM
 sierra_view.varfield AS v
 JOIN
