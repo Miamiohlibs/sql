@@ -13,7 +13,7 @@ WHERE
 
 )
 AND
-v.marc_ind2 != ''
+v.marc_ind2 != '' --do not use IS NOT NULL; returns false positives
 
 --limit 10000
 ;
