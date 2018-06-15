@@ -1,5 +1,6 @@
 ﻿SELECT
 m.record_type_code || m.record_num || 'x'
+--count(*)
 FROM
 sierra_view.varfield AS v
 JOIN
@@ -12,11 +13,9 @@ WHERE
 
 )
 AND
-(v.marc_ind2 = '0'
-OR
-v.marc_ind2 = '1' --null is also zero; must exclude nulls
-)
---limit 100
+v.marc_ind2 != ''
+
+--limit 10000
 ;
 
 --add bib rec nums and delete cleanup 2nd ind's to show null or empty
