@@ -1,5 +1,5 @@
-﻿SELECT
-m.record_type_code || m.record_num || 'x' --count(*)
+﻿SELECT --will require manual review
+m.record_type_code || m.record_num || 'a' --count(*)
 FROM
 sierra_view.varfield AS v
 JOIN
@@ -8,16 +8,20 @@ ON
 m.id = v.record_id
 WHERE
 --do not limit by varfield type code unless it corresponds to 
-(v.marc_tag = '700'
+v.marc_tag = '100'
+/*OR
+(v.marc_tag = '110'
 OR
-v.marc_tag = '710'
-OR
-v.marc_tag = '711'
+v.marc_tag = '111'
+)*/
+AND
+(v.marc_ind1 != '0'
+AND
+v.marc_ind1 != '1'
+AND
+v.marc_ind1 != '3'
 )
-AND
-v.marc_ind2 != ''
-AND
-v.marc_ind2 != '2'
+
 
 --limit 100
 ;

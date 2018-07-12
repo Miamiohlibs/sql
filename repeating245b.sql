@@ -1,4 +1,6 @@
-﻿select 'b'||record_num||'a'
+﻿SELECT
+count(*)
+--'b'||record_num||'a'
 FROM
 sierra_view.subfield_view AS v
 
