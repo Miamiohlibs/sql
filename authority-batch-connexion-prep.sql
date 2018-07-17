@@ -4,7 +4,7 @@
 FROM 
 sierra_view.catmaint
 WHERE 
-condition_code_num=1 --do we really want to only look at first time headings? 
+condition_code_num = 1 --do we really want to only look at first time headings? 
 		     --what about updates to headings?
 AND
 index_tag = 'd'
@@ -22,3 +22,5 @@ AND
 Author != ‘’ --give us only the name subject
 
 */
+
+--could we pull out authority record numbers for invalid headings (
