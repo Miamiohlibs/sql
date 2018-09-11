@@ -5,7 +5,7 @@ concat(c.p00,c.p01,c.p02,c.p03,c.p04,c.p05,c.p06,c.p07,c.p08,c.p09,c.p10,c.p11,c
 --merging control_field table into an 008 field
 FROM 
 sierra_view.control_field AS c
-JOIN --Join help by Ray Voelker
+JOIN --Join and concat help by Ray Voelker
 sierra_view.record_metadata as r
 ON
 r.id = c.record_id
