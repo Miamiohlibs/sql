@@ -5,7 +5,7 @@ c.p00||c.p01||c.p02||c.p03||c.p04||c.p05||c.p06||c.p07||c.p08||c.p09||c.p10||c.p
 --merging control_field table into an 008 field
 FROM 
 sierra_view.control_field AS c
-LEFT OUTER JOIN
+JOIN
 sierra_view.record_metadata as r
 ON
 r.id = c.record_id
