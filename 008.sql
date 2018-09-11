@@ -11,7 +11,9 @@ ON
 r.id = c.record_id
 WHERE
 r.record_type_code = 'b'
+AND
+c.control_num = '8'
  
 
-limit 100;
+--limit 100;
 
