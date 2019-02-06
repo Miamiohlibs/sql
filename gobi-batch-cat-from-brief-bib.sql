@@ -19,7 +19,7 @@ m.id = l.bib_record_id
 WHERE
 m.record_type_code = 'b'
 AND
-m.creation_date_gmt::date > current_date-27 
+m.creation_date_gmt::date > current_date-7 
 AND
 m.deletion_date_gmt IS NULL 
 AND
